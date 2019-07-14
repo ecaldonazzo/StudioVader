@@ -1,4 +1,5 @@
 <?php
+/* Implementar no código de produção */
 class MySQLConnection {
     var $host;
     var $user;

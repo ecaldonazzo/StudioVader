@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="1f295fda-9f86-4612-9f4e-d33e74c16e8e" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vader: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vader: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="banda: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vader: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="instrumentos: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vader: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="produtores: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vader: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="projetos: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="cadastroprojeto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cadastroprojeto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1044">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projetos" pinned="false" current-in-tab="false">
+        <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/projetos">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="musica.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musica.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7380">
+              <caret line="410" column="14" selection-start-line="407" selection-start-column="8" selection-end-line="410" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projeto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projeto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3978">
+              <caret line="221" column="52" selection-start-line="221" selection-start-column="52" selection-end-line="221" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faixas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/faixas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3204">
+              <caret line="178" column="41" selection-start-line="174" selection-start-column="36" selection-end-line="178" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forms.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10548">
+              <caret line="586" column="64" selection-start-line="586" selection-start-column="64" selection-end-line="586" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="banda.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/banda.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="434" column="56" selection-start-line="434" selection-start-column="56" selection-end-line="434" selection-end-column="56" />
+              <folding>
+                <element signature="e#26698#26705#1#HTML" expanded="true" />
+                <element signature="e#33515#33521#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Classes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Classes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassesTemp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ClassesTemp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bd</find>
+      <find>modal</find>
+      <find>chec</find>
+      <find>pie</find>
+      <find>Projeto</find>
+      <find>canvas</find>
+      <find>name=</find>
+      <find>option</find>
+      <find>Produtor</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/css/fonte2.css" />
+        <option value="$PROJECT_DIR$/charts.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b5860019-92b2-4383-bc92-4f27333f8c87/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b5860019-92b2-4383-bc92-4f27333f8c87/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ba5237a7-1750-4190-b9f3-706625caa2c7/console.sql" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/musica.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ece5f8d8-f96e-415f-b0fe-d07cf306e56e/console.sql" />
+        <option value="$PROJECT_DIR$/faixas.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/classes/Classes.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dfa229df-0072-4d4a-a421-6dddf60e06a6/console.sql" />
+        <option value="$PROJECT_DIR$/faixas.php" />
+        <option value="$PROJECT_DIR$/cadastroprojeto.php" />
+        <option value="$PROJECT_DIR$/projeto.php" />
+        <option value="$PROJECT_DIR$/forms.html" />
+        <option value="$PROJECT_DIR$/musica.php" />
+        <option value="$PROJECT_DIR$/banda.php" />
+        <option value="$PROJECT_DIR$/ClassesTemp.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="732" />
+    <option name="width" value="1199" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="estudio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estudio" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;MariaDB" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\esdra\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f295fda-9f86-4612-9f4e-d33e74c16e8e" name="Default" comment="" />
+      <created>1534412424632</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534412424632</updated>
+      <workItem from="1534412426616" duration="9394000" />
+      <workItem from="1534793860753" duration="10482000" />
+      <workItem from="1535013431417" duration="7487000" />
+      <workItem from="1535642757040" duration="10426000" />
+      <workItem from="1535657082464" duration="103000" />
+      <workItem from="1536008132737" duration="10112000" />
+      <workItem from="1536026688544" duration="618000" />
+      <workItem from="1536096364124" duration="622000" />
+      <workItem from="1536611174930" duration="601000" />
+      <workItem from="1537478579472" duration="1750000" />
+      <workItem from="1537480389988" duration="13327000" />
+      <workItem from="1537499506951" duration="10000" />
+      <workItem from="1537697332208" duration="5000" />
+      <workItem from="1538033898753" duration="1026000" />
+      <workItem from="1538141686017" duration="1972000" />
+      <workItem from="1538143991881" duration="1706000" />
+      <workItem from="1538145803541" duration="10000" />
+      <workItem from="1538405846749" duration="1286000" />
+      <workItem from="1549334151809" duration="418000" />
+      <workItem from="1551144374903" duration="2158000" />
+      <workItem from="1556525210949" duration="36000" />
+      <workItem from="1556525682553" duration="174000" />
+      <workItem from="1556526196440" duration="61000" />
+      <workItem from="1562461257822" duration="2102000" />
+      <workItem from="1562546550227" duration="739000" />
+      <workItem from="1562720969110" duration="5521000" />
+      <workItem from="1562794531975" duration="1777000" />
+      <workItem from="1562796377912" duration="1779000" />
+      <workItem from="1562798247278" duration="1788000" />
+      <workItem from="1562800060604" duration="1793000" />
+      <workItem from="1562801936186" duration="1399000" />
+      <workItem from="1562803737481" duration="1791000" />
+      <workItem from="1562805549029" duration="1791000" />
+      <workItem from="1562807359333" duration="420000" />
+      <workItem from="1562808281923" duration="333000" />
+      <workItem from="1562808845489" duration="1790000" />
+      <workItem from="1562810678979" duration="1859000" />
+      <workItem from="1562891911994" duration="1770000" />
+      <workItem from="1562894111867" duration="1787000" />
+      <workItem from="1562895919306" duration="1828000" />
+      <workItem from="1562897845152" duration="669000" />
+      <workItem from="1562977612483" duration="1774000" />
+      <workItem from="1562979532292" duration="1793000" />
+      <workItem from="1562981467616" duration="1790000" />
+      <workItem from="1562983282216" duration="224000" />
+      <workItem from="1562989959662" duration="1789000" />
+      <workItem from="1562991965642" duration="1780000" />
+      <workItem from="1562993864099" duration="1490000" />
+      <workItem from="1563131948829" duration="1057000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="116417000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32897604" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17110874" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32893288" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="8" visible="true" weight="0.33442265" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2844">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfa229df-0072-4d4a-a421-6dddf60e06a6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/charts.html" />
+    <entry file="file://$PROJECT_DIR$/login.html" />
+    <entry file="file://$PROJECT_DIR$/faixas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4086">
+          <caret line="227" column="43" selection-start-line="227" selection-start-column="43" selection-end-line="227" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3492">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3186">
+          <caret line="177" column="30" selection-start-line="170" selection-start-column="22" selection-end-line="177" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2844">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfa229df-0072-4d4a-a421-6dddf60e06a6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/charts.html" />
+    <entry file="file://$PROJECT_DIR$/login.html" />
+    <entry file="file://$PROJECT_DIR$/faixas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4086">
+          <caret line="227" column="43" selection-start-line="227" selection-start-column="43" selection-end-line="227" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3186">
+          <caret line="177" column="30" selection-start-line="170" selection-start-column="22" selection-end-line="177" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2844">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3492">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/charts.html" />
+    <entry file="file://$PROJECT_DIR$/login.html" />
+    <entry file="file://$PROJECT_DIR$/faixas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4086">
+          <caret line="227" column="43" selection-start-line="227" selection-start-column="43" selection-end-line="227" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3186">
+          <caret line="177" column="30" selection-start-line="170" selection-start-column="22" selection-end-line="177" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2844">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3492">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/charts.html" />
+    <entry file="file://$PROJECT_DIR$/login.html" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dcaf0a94-3a58-445f-8987-9a0e7fd7329b/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ece5f8d8-f96e-415f-b0fe-d07cf306e56e/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="166" column="22" lean-forward="true" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validalogin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validaregistro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/faixas">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/dfa229df-0072-4d4a-a421-6dddf60e06a6.SCHEMA:vader">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>dfa229df-0072-4d4a-a421-6dddf60e06a6.SCHEMA:vader</OriginalElement>
+          <nodes>
+            <node x="188.00000000000006" y="347.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.musico</node>
+            <node x="573.0" y="124.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.banda</node>
+            <node x="677.8277777777778" y="270.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos</node>
+            <node x="916.8277777777778" y="347.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.tipo_acesso</node>
+            <node x="368.00000000000006" y="347.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.instrumentos</node>
+            <node x="908.6951501154734" y="115.9699769053118">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.produtores</node>
+            <node x="885.0777777777778" y="614.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.login</node>
+            <node x="528.25" y="914.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas_projeto</node>
+            <node x="562.5" y="0.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.generos</node>
+            <node x="0.0" y="347.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.concluido</node>
+            <node x="367.50000000000006" y="548.0">dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.produtores">
+              <point x="73.0" y="-114.0" />
+              <point x="860.3277777777778" y="245.0" />
+              <point x="889.0" y="245.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.concluido">
+              <point x="-74.0" y="-158.0" />
+              <point x="386.00000000000006" y="528.0" />
+              <point x="84.0" y="528.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.login" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos">
+              <point x="-40.25" y="-92.0" />
+              <point x="925.3277777777778" y="528.0" />
+              <point x="860.3277777777778" y="528.0" />
+              <point x="73.0" y="114.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.generos">
+              <point x="37.0" y="-158.0" />
+              <point x="497.00000000000006" y="518.0" />
+              <point x="562.5" y="518.0" />
+              <point x="562.5" y="99.0" />
+              <point x="597.8333333333334" y="99.0" />
+              <point x="-70.66666666666663" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.instrumentos">
+              <point x="0.0" y="-158.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.banda">
+              <point x="-73.0" y="-114.0" />
+              <point x="714.3277777777778" y="245.0" />
+              <point x="668.5" y="245.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas_projeto" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos">
+              <point x="44.5" y="-48.0" />
+              <point x="661.75" y="889.0" />
+              <point x="787.3277777777778" y="889.0" />
+              <point x="0.0" y="114.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.generos">
+              <point x="0.0" y="-114.0" />
+              <point x="787.3277777777778" y="245.0" />
+              <point x="774.5" y="245.0" />
+              <point x="774.5" y="99.0" />
+              <point x="739.1666666666667" y="99.0" />
+              <point x="70.66666666666674" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.musico">
+              <point x="-37.0" y="-158.0" />
+              <point x="423.00000000000006" y="518.0" />
+              <point x="268.00000000000006" y="518.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.login" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.tipo_acesso">
+              <point x="40.25" y="-92.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.projetos">
+              <point x="74.0" y="-158.0" />
+              <point x="534.0" y="528.0" />
+              <point x="714.3277777777778" y="528.0" />
+              <point x="-73.0" y="114.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.banda" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.generos">
+              <point x="0.0" y="-48.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas_projeto" target="dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.faixas">
+              <point x="-44.5" y="-48.0" />
+              <point x="572.75" y="889.0" />
+              <point x="460.00000000000006" y="889.0" />
+              <point x="0.0" y="158.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8407766990291262" x="65.0" y="265.0" />
+          <SelectedNodes>
+            <node>dfa229df-0072-4d4a-a421-6dddf60e06a6.TABLE:vader.produtores</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/banda">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/generos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/produtores">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfa229df-0072-4d4a-a421-6dddf60e06a6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cadastroprojeto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dfa229df-0072-4d4a-a421-6dddf60e06a6/schema/vader/table/projetos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10548">
+          <caret line="586" column="64" selection-start-line="586" selection-start-column="64" selection-end-line="586" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faixas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3204">
+          <caret line="178" column="41" selection-start-line="174" selection-start-column="36" selection-end-line="178" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="221" column="52" selection-start-line="221" selection-start-column="52" selection-end-line="221" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7380">
+          <caret line="410" column="14" selection-start-line="407" selection-start-column="8" selection-end-line="410" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="434" column="56" selection-start-line="434" selection-start-column="56" selection-end-line="434" selection-end-column="56" />
+          <folding>
+            <element signature="e#26698#26705#1#HTML" expanded="true" />
+            <element signature="e#33515#33521#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesTemp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
