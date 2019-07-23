@@ -6,69 +6,81 @@
  * Time: 19:13
  */
 
-class Classes
-{
-    function Conecta() {
-        $this->servidor = "localhost";
-        $this->usuario = "root";
-        $this->senha = "";
-        $this->banco = "vader";
-        $this->conexao = mysqli_connect($this->servidor,$this->usuario,$this->senha,$this->banco) or die ("Não foi Possivel Conectar");
+class MySQLClasses {
+    var $host;
+    var $user;
+    var $pass;
+    var $database;
+    var $link;
+
+    function OpenConnection(){
+        $this->host     = 'localhost';
+        $this->user     = 'root';
+        $this->pass     = 'root';
+        $this->database = 'vader';
+
+        $this->link = new mysqli($this->host, $this->user, $this->pass, $this->database);
+        if (!$this->link) {
+            echo "Não foi possível realizar conexão com o banco." . PHP_EOL;
+            echo "Erro: " . mysqli_connect_errno() . PHP_EOL;
+            echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+            exit;
+        }
+        else {
+            return $this->link;
+            $this->CloseConnection($this->link);
+        }
+
+    }
+    function CloseConnection($link){
+        mysqli_close($this->link);
     }
 
-    function GetConexao(){
-        return $this->conexao;
-    }
 
-    function ExecutaConsulta($conexao,$query,$tipo,$retornaMsg=True,$debug=False){
-
-        $this->query = mysqli_query($conexao, $query);
-
-        switch($tipo){
-            case 'select':
-                if (mysqli_num_rows($this->query) == 0) {
-                    if ($retornaMsg) {
-                        echo "Nenhum registro foi encontrado!";
-                    }
-                } else {
-                    $this->result = mysqli_fetch_object($this->query);
-                    if ($debug) {
-                        print_r($this->result);
-                        exit;
-                    } else {
-                        return $this->result;
-                    }
-                }
-                break;
-
-            /* Case para tratar inserções */
-            case 'insert':
-                if (mysqli_affected_rows($this->conexao)>0) {
-                    echo "Registro efetuado com sucesso!";
-                } else {
-                    echo "Registro Nao inserido!";
-                }
-                break;
+    function LoginValidate($user,$pass,$debug = false){
+        $sqlLogin = "
+            select  
+                id_login,
+                usuario,
+                senha
+            from
+                login
+            where
+                usuario = '". $user ."' and
+                senha = '". $pass ."'            
+        ";
+        if ($debug) {
+            echo $sqlLogin;
+            exit;
+        } else {
+            $mysqli = $this->OpenConnection();
+            $resultLogin = $mysqli->query($sqlLogin);
+            return $resultLogin;
+            $this->CloseConnection($this->link);
         }
     }
-
-    function ValidaUsuario($conexao,$query,$debug=False){
-
-        $this->query = mysqli_query($conexao, $query);
-
-        if($this->query->num_rows > 0) {
-            $_SESSION['msg'] = "Usuario já cadastrado, tente novamente";
-            header("Location: register.php");
-        }
-    }
-
-
-    function PasswordCheck($senha, $checksenha){
-        if(password_verify($senha, $checksenha)){
-            header("location: index.php");
+    function MySelect($select, $debug = false){
+        if($debug){
+           echo $select;
+           exit;
         }else{
-            $_SESSION['msg'] = "Nao conseguiu!";
-            header("location: login.php");
+            $mysqli = $this->OpenConnection();
+            $result = $mysqli->query($select);
+            return $result;
+            $this->CloseConnection($this->link);
         }
     }
-}
+    function MyQuery($query, $debug = false){
+        if($debug){
+            echo $query;
+            exit;
+        }else{
+            $mysqli = $this->OpenConnection();
+            $mysqli->query($query);
+            $result = $mysqli->affected_rows;
+            return $result;
+            $this->CloseConeection($this->link);
+        }
+    }
+
+    }
