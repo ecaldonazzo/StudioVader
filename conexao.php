@@ -2,9 +2,9 @@
 include "classes/Classes.php";
 
 //instancia o objeto
-$objConexao = new Classes();
+$objclasse = new MySQLClasses();
 
 // utiliza metodo para conectar com o banco
-$objConexao->Conecta();
-$conexao = $objConexao->GetConexao();
+$objclasse->OpenConnection();
+
 ?>
