@@ -29,7 +29,7 @@ if($botaoregistrar){
         $_SESSION['msg'] = "Senha não confirmada, tente novamente";
         header("Location: register.php");
     } else{
-        $result_usuario = "
+        $selectusuario = "
         SELECT
           id_login
         FROM
@@ -37,7 +37,14 @@ if($botaoregistrar){
         WHERE
           usuario = '".$dados_ok['usuario']."'";
 
-        $objConexao->ValidaUsuario($conexao,$result_usuario);
+        $uservalida = $objclasse->MySelect($selectusuario);
+        if(mysqli_num_rows($uservalida) > 0){
+            $_SESSION['msg'] = "Usuario já cadastrado, tente novamente";
+            header("Location: register.php");
+        }
+
+
+
     }
 
     if($erro === true){
@@ -56,7 +63,10 @@ if($botaoregistrar){
         '".$dados['usuario']."',
         '".$dados['senha']."')";
 
-        $objConexao->ExecutaConsulta($conexao,$result_usuario,'insert');
+        $objquery = $objclasse->MyQuery($result_usuario);
+        $_SESSION['msg'] = "Usuario cadastrado com Sucesso";
+        header("Location: register.php");
+
 
     }
 }
