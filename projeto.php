@@ -55,9 +55,9 @@ session_start();
             <li><a href="projeto.php"> <i class="fa fa-bar-chart"></i>Projetos                             </a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Cadastro </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Musicista</a></li>
-                <li><a href="#">Banda</a></li>
-                <li><a href="#">Produtor</a></li>
+                <li><a href="musicos.php">Musicista</a></li>
+                <li><a href="banda.php">Banda</a></li>
+                <li><a href="produtor.php">Produtor</a></li>
               </ul>
             </li>
           </ul>
@@ -222,7 +222,7 @@ session_start();
                                             order by
                                               descricao_genero 
                                         ";
-                                        $row_generos = mysqli_query($conexao,$consultaGenero);
+                                        $row_generos = $objclasse->MySelect($consultaGenero);
                                         while($generos = mysqli_fetch_object($row_generos)) {
                                             echo "<option value='".$generos->id_genero."'>$generos->descricao_genero</option>";
                                         }
@@ -243,7 +243,7 @@ session_start();
                                             order by
                                               nome_produtor 
                                         ";
-                                    $row_produtor = mysqli_query($conexao,$consultaProdutor);
+                                    $row_produtor = $objclasse->MySelect($consultaProdutor);
                                     while($produtores = mysqli_fetch_object($row_produtor)) {
                                         echo "<option value='".$produtores->id_produtor."'>$produtores->nome_produtor</option>";
                                     }
@@ -268,7 +268,7 @@ session_start();
                                              order by  
                                                nome_banda 
                                        ";
-                                    $row_banda = mysqli_query($conexao,$consultaBanda);
+                                    $row_banda = $objclasse->MySelect($consultaBanda);
                                     while($banda = mysqli_fetch_object($row_banda)){
                                         echo "<option value='".$banda->id_banda."'>$banda->nome_banda</option>";
                                     }
@@ -369,7 +369,7 @@ session_start();
                                    ";
                               //echo $result_projetos;exit; //Se quiser depurar, descomentar
                               //$row_projetos = $objConexao->ExecutaConsulta($conexao,$result_projetos,'select',true);
-                              $row_projetos = mysqli_query($conexao,$result_projetos);
+                              $row_projetos = $objclasse->MySelect($result_projetos);
                               while($projeto = mysqli_fetch_object($row_projetos)) {
                                     echo "<tr>
                                           <th scope='row'>
