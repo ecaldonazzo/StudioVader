@@ -14,15 +14,34 @@ if ($btnlogin) {
 
 
     if ((!empty($usuario)) && (!empty($senha))) {
+        $sqlLogin = "
+            select  
+                id_login,
+                usuario,
+                senha
+            from
+                login
+            where
+                usuario = '". $usuario ."'
+                  ";
 
-        $login = $objclasse->LoginValidate($usuario,$senha);
+         $login = $objclasse->MySelect($sqlLogin);
 
+         if($login){
+             $row_login = mysqli_fetch_assoc($login);
+             if(password_verify($senha,$row_login['senha'])){
+                 header("location: index.php");
+             }else{
+                 $_SESSION['msg'] = "Login e Senha Incorretos!";
+                 header("location: login.php");
+             }
+         }
 
-
-    } else {
-        $_SESSION['msg'] = "Login e senha incorreto!";
-        header("location: login.php");
     }
+    else{
+            $_SESSION['msg'] = "Login e Senha Incorretos!";
+            header("location: login.php");
+        }
 }
 
 //LOGOUT
