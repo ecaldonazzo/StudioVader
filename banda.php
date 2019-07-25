@@ -3,7 +3,7 @@ session_start();
 include ('conexao.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,9 +55,9 @@ include ('conexao.php');
                 <li><a href="projeto.php"> <i class="fa fa-bar-chart"></i>Projetos                             </a></li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Cadastro </a>
                     <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                        <li><a href="#">Musicista</a></li>
-                        <li><a href="#">Banda</a></li>
-                        <li><a href="#">Produtor</a></li>
+                        <li><a href="musicos.php">Musicista</a></li>
+                        <li><a href="banda.php">Banda</a></li>
+                        <li><a href="produtor.php">Produtor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -270,7 +270,7 @@ include ('conexao.php');
                     <div class="card">
                         <div class="card-header">
 
-                            <form action="projeto.php" method="POST" class="form-inline col-md-12">
+                            <form action="banda.php" method="POST" class="form-inline col-md-12">
 
                                 <div class="form-group col-9">
 
@@ -291,16 +291,16 @@ include ('conexao.php');
 
 
 
-                            <!-- Modal Cadastro Projeto-->
+                            <!-- Modal Cadastro Musico-->
                             <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg">
-                                <div role="document" class="modal-dialog modal-lg">
+                                <div role="document" class="modal-dialog modal-md">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 id="exampleModalLabel" class="modal-title">Novo Projeto</h5>
                                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <p>Digite as Informações Iniciais do seu Projeto.</p>
+                                        <div class="modal-body ">
+                                            <p class="text-center">Selecione o Musico e seu instrumento.</p>
                                             <div class="ui-state-error ui-corner-all">
                                                 <?php
                                                 if(isset($_SESSION['msg'])){
@@ -309,93 +309,58 @@ include ('conexao.php');
                                                 }
                                                 ?>
                                             </div>
-                                            <form method="POST" action="cadastroprojeto.php" class="row">
-                                                <div class="col-md-7 form-group">
-                                                    <label>Titulo</label>
-                                                    <input type="text" name="album" placeholder="Titulo do Album" class="form-control">
-                                                </div>
-                                                <div class="col-md-4 form-group">
-                                                    <label>Genêro</label>
-                                                    <select name="genero" class="form-control">
-                                                        <?php
-                                                        $consultaGenero = "
-                                            select
-                                              id_genero,
-                                              descricao_genero
-                                            from
-                                              generos
-                                            order by
-                                              descricao_genero 
-                                        ";
-                                                        $row_generos = mysqli_query($conexao,$consultaGenero);
-                                                        while($generos = mysqli_fetch_object($row_generos)) {
-                                                            echo "<option value='".$generos->id_genero."'>$generos->descricao_genero</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-7 form-group">
-                                                    <label>Produtor Musical</label>
+                                            <form method="POST" action="banda.php" class="row justify-content-md-center">
+
+                                                <div class="col-md-7  form-group">
+                                                    <label>Musicista</label>
                                                     <!--<input type="text" name="produtor" placeholder="Nome do Produtor" class="form-control">-->
-                                                    <select name="produtor" class="form-control">
+                                                    <select name="musico" class="form-control">
                                                         <?php
-                                                        $consultaProdutor = "
+                                                        $consultaMusico = "
                                             select
-                                              id_produtor,
-                                              nome_produtor
+                                              id_musico,
+                                              musico
                                             from
-                                              produtores
+                                              musico
                                             order by
-                                              nome_produtor 
+                                              musico 
                                         ";
-                                                        $row_produtor = mysqli_query($conexao,$consultaProdutor);
-                                                        while($produtores = mysqli_fetch_object($row_produtor)) {
-                                                            echo "<option value='".$produtores->id_produtor."'>$produtores->nome_produtor</option>";
+                                                        $row_musico =$objclasse->MySelect($consultaMusico);
+                                                        while($musico = mysqli_fetch_object($row_musico)) {
+                                                            echo "<option value='".$musico->id_musico."'>$musico->musico</option>";
                                                         }
                                                         ?>
                                                     </select>
-                                                </div>
-                                                <div class="col-md-4  form-group">
-                                                    <label>Data Inicial</label>
-                                                    <input type="date" name="data_ini" placeholder="00/00/0000" class="form-control">
                                                 </div>
                                                 <div class="col-md-7 form-group">
-                                                    <label>Artista/Banda</label>
+                                                    <label>Instrumento</label>
                                                     <!--input type="text" name="banda" placeholder="Nome do Artista/Banda" class="form-control">-->
-                                                    <select name="banda" class="form-control">
+                                                    <select name="instrumento" class="form-control">
                                                         <?php
-                                                        $consultaBanda = "
+                                                        $consultaInstrumento = "
                                              select
-                                               id_banda,
-                                               nome_banda
+                                               id_instrumento,
+                                               instrumento
                                              from
-                                               banda
+                                               instrumentos
                                              order by  
-                                               nome_banda 
+                                               instrumento 
                                        ";
-                                                        $row_banda = mysqli_query($conexao,$consultaBanda);
-                                                        while($banda = mysqli_fetch_object($row_banda)){
-                                                            echo "<option value='".$banda->id_banda."'>$banda->nome_banda</option>";
+                                                        $row_instrumento = $objclasse->MySelect($consultaInstrumento);
+                                                        while($inst = mysqli_fetch_object($row_instrumento)){
+                                                            echo "<option value='".$inst->id_instrumento."'>$inst->instrumento</option>";
                                                         }
                                                         ?>
                                                     </select>
-                                                </div>
-                                                <div class="col-md-4  form-group">
-                                                    <label>Data Final</label>
-                                                    <input type="date" name="data_fim" placeholder="00/00/0000" class="form-control">
-                                                </div>
-                                                <div class="col-md-2 form-group">
-                                                    <label>Nº Faixas</label>
-                                                    <input type="number" name="num_faixas" placeholder="00" class="form-control">
                                                 </div>
 
 
 
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" data-dismiss="modal" class="btn btn-secondary"><span class="fa fa-times"></span> Cancelar</button>
-                                            <a href="projeto.php"><button type="submit" name="concluir1" value="concluir1" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Concluir</button></a>
-                                            <a href="faixas.php"><button type="button" class="btn btn-info" ><i class="fa fa-music" aria-hidden="true"></i> Criar Faixas</button></a>
+                                        <div class="modal-footer justify-content-md-center">
+
+                                            <a href="banda.php"><button type="submit" name="adicionar" value="adicionar" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Adicionar</button></a>
+
                                         </div></form>
                                     </div>
                                 </div>
@@ -429,12 +394,12 @@ include ('conexao.php');
                                         <th>#</th>
                                         <th>Banda</th>
                                         <th>Genero</th>
-                                        <th>data de Formação</th>
                                         <th>Responsavel</th>
                                         <th>Celular</th>
-                                        <th>Data Inicial</th>
-                                        <th>Data Final</th>
-                                        <th>Faixas</th>
+                                        <th>E-mail</th>
+                                        <th>Controle</th>
+
+
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -445,37 +410,35 @@ include ('conexao.php');
                                         $where = "
                                     WHERE
                                         (
-                                            projetos.descricao_projeto LIKE '%".$pesquisa."%' OR
-                                            generos.descricao_genero LIKE '%".$pesquisa."%' OR
                                             banda.nome_banda LIKE '%".$pesquisa."%' OR
-                                            produtores.nome_produtor LIKE '%".$pesquisa."%'
+                                            generos.descricao_genero LIKE '%".$pesquisa."%' OR
+                                            banda.responsavel LIKE '%".$pesquisa."%' OR
+                                            banda.celular_responsavel LIKE '%".$pesquisa."%'
                                          )   
                                   ";
                                     }
                                     else {
                                         $where = "";
                                     }
-                                    $result_projetos = "
+                                    $result_banda = "
                                       SELECT 
-                                        projetos.id_projeto, 
-                                        projetos.album,
-                                        projetos.data_ini,
-                                        projetos.data_fim,
-                                        projetos.num_faixas,
-                                        generos.descricao_genero,
+                                        banda.id_banda, 
                                         banda.nome_banda,
-                                        produtores.nome_produtor                            
+                                        banda.responsavel,
+                                        banda.celular_responsavel,
+                                        banda.email_banda,
+                                        generos.descricao_genero
+                                               
                                       FROM 
-                                        projetos
-                                        LEFT JOIN generos ON generos.id_genero = projetos.id_genero_projeto
-                                        LEFT JOIN banda ON banda.id_banda = projetos.id_banda
-                                        LEFT JOIN produtores ON produtores.id_produtor = projetos.id_produtor                                     
+                                        banda
+                                        left join generos on banda.id_genero_banda = generos.id_genero
+                                     
                                         $where                                   
                                    ";
-                                    //echo $result_projetos;exit; //Se quiser depurar, descomentar
+                                    //echo $result_banda;exit; //Se quiser depurar, descomentar
                                     //$row_projetos = $objConexao->ExecutaConsulta($conexao,$result_projetos,'select',true);
-                                    $row_projetos = mysqli_query($conexao,$result_projetos);
-                                    while($projeto = mysqli_fetch_object($row_projetos)) {
+                                    $row_ban = $objclasse->MySelect($result_banda);
+                                    while($banda = mysqli_fetch_object($row_ban)) {
                                         echo "<tr>
                                           <th scope='row'>
                                             <div class='form-check'>
@@ -483,31 +446,25 @@ include ('conexao.php');
                                             </div>
                                           </th>
                                           <td>         
-                                            $projeto->album
+                                            ".utf8_encode($banda->nome_banda)."
                                           </td>
                                           <td>         
-                                            $projeto->descricao_genero
+                                            $banda->descricao_genero
                                           </td> 
                                           <td>         
-                                             ".utf8_encode($projeto->nome_banda)."
+                                             $banda->responsavel
                                           </td> 
                                           <td>         
-                                            $projeto->nome_produtor
-                                          </td> 
-                                          <td>       
-                                            <div class='progress'>
-                                                <div class='progress-bar' role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>25%</div>
-                                            </div>
-                                          </td> 
+                                            $banda->celular_responsavel
+                                          </td>                                        
                                           <td>   
-                                            $projeto->data_ini
-                                          </td> 
-                                          <td>   
-                                            $projeto->data_fim
-                                          </td> 
-                                          <td>   
-                                            $projeto->num_faixas
-                                          </td> 
+                                            $banda->email_banda
+                                          </td>
+                                          <td>
+                                          </button><button type=\"button\" class=\"btn btn-danger btn-xs \"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button> <button type=\"button\" class=\"btn btn-secondary btn-xs \"><i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>
+                                          </td>
+
+                                      
                                     </tr>";
                                     }
                                     ?>
