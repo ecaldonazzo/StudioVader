@@ -20,7 +20,7 @@ if($btconcluir){
     }
 
     elseif($erro === true){
-        header("Location: projetos.php");
+        header("Location: projeto.php");
 
     }else {
         /*
@@ -55,7 +55,9 @@ if($btconcluir){
              ".$dad['produtor'].",
             ".$dad['banda'].")";
         //echo $resultado;exit;
-        $objConexao->ExecutaConsulta($conexao,$resultado,'insert');
+
+        $objclasse->MyQuery($resultado);
+        header("Location: projeto.php");
 
 
          }
