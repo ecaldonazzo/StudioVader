@@ -54,9 +54,9 @@ session_start();
             <li><a href="projeto.php"> <i class="fa fa-bar-chart"></i>Projetos                             </a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Profissionais </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Musicista</a></li>
-                <li><a href="#">Banda</a></li>
-                <li><a href="#">Produtor</a></li>
+                <li><a href="musicos.php">Musicista</a></li>
+                <li><a href="banda.php">Banda</a></li>
+                <li><a href="produtor.php">Produtor</a></li>
               </ul>
             </li>
           </ul>

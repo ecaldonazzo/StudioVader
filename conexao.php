@@ -6,5 +6,3 @@ $objclasse = new MySQLClasses();
 
 // utiliza metodo para conectar com o banco
 $objclasse->OpenConnection();
-
-?>

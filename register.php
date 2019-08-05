@@ -43,9 +43,9 @@ session_start();
             <p>Faça seu cadastro para acessar sua plataforma Vader.</p>
               <div class="ui-state-error ui-corner-all">
                   <?php
-                  if(isset($_SESSION['msg'])){
-                      echo $_SESSION['msg'];
-                      unset($_SESSION['msg']);
+                  if (isset($_SESSION['msg'])) {
+                       echo $_SESSION['msg'];
+                       unset($_SESSION['msg']);
                   }
                   ?>
               </div>

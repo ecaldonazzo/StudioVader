@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: esdra
- * Date: 09/10/2018
- * Time: 19:13
- */
+
 
 class MySQLClasses {
     var $host;
@@ -20,13 +15,12 @@ class MySQLClasses {
         $this->database = 'vader';
 
         $this->link = new mysqli($this->host, $this->user, $this->pass, $this->database);
-        if (!$this->link) {
+        if (! $this->link) {
             echo "Não foi possível realizar conexão com o banco." . PHP_EOL;
             echo "Erro: " . mysqli_connect_errno() . PHP_EOL;
             echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
             exit;
-        }
-        else {
+        } else {
             return $this->link;
             $this->CloseConnection($this->link);
         }
@@ -35,9 +29,7 @@ class MySQLClasses {
     function CloseConnection($link){
         mysqli_close($this->link);
     }
-
-
-    function LoginValidate($user,$pass,$debug = false){
+    function LoginValidate($user,$debug = false){
         $sqlLogin = "
             select  
                 id_login,
@@ -46,35 +38,36 @@ class MySQLClasses {
             from
                 login
             where
-                usuario = '". $user ."' and
-                senha = '". $pass ."'            
-        ";
+                usuario = '". $user ."'
+                  ";
+
         if ($debug) {
             echo $sqlLogin;
             exit;
         } else {
             $mysqli = $this->OpenConnection();
-            $resultLogin = $mysqli->query($sqlLogin);
+            $mysqli->query($sqlLogin);
+            $resultLogin = $mysqli->fetch_object;
             return $resultLogin;
             $this->CloseConnection($this->link);
         }
     }
-    function MySelect($select, $debug = false){
-        if($debug){
+    function MySelect($select, $debug = false) {
+        if ($debug) {
            echo $select;
            exit;
-        }else{
+        } else {
             $mysqli = $this->OpenConnection();
             $result = $mysqli->query($select);
             return $result;
             $this->CloseConnection($this->link);
         }
     }
-    function MyQuery($query, $debug = false){
-        if($debug){
+    function MyQuery($query, $debug = false) {
+        if ($debug) {
             echo $query;
             exit;
-        }else{
+        } else {
             $mysqli = $this->OpenConnection();
             $mysqli->query($query);
             $result = $mysqli->affected_rows;
@@ -82,5 +75,4 @@ class MySQLClasses {
             $this->CloseConeection($this->link);
         }
     }
-
-    }
+}

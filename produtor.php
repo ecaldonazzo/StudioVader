@@ -163,79 +163,50 @@ include ('conexao.php');
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex align-items-center">
-                            <h4>Musicista</h4>
+                            <h4>Produtor Musical</h4>
                         </div>
                         <div class="card-body">
-                            <form class="row">
+
+                            <form method="POST" action="validaprodutor.php" class="row">
 
                                 <div class="col-md-5 form-group">
-                                    <label>Nome do Musico</label>
-                                    <input type="text" placeholder="Nome do Musico" class="form-control">
+                                    <label>Nome do Produtor</label>
+                                    <input type="text" name="produtor"  placeholder="Nome do Produtor" class="form-control">
                                 </div>
                                 <div class="col-md-3 form-group">
                                     <label>Celular</label>
-                                    <input type="tel" placeholder="(DDD)9 9999-9999" class="form-control">
+                                    <input type="tel" name="celular_produtor" placeholder="(DDD)9 9999-9999" class="form-control">
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label>E-mail</label>
-                                    <input type="email" placeholder="bandadepagodemetal@provedor.com.br" class="form-control">
+                                    <input type="email" name="email_produtor" placeholder="bandadepagodemetal@provedor.com.br" class="form-control">
                                 </div>
-
-                                <div class="col-md-4 form-group">
-                                    <label>Instrumento</label>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th>Instrumento</th>
-                                            <th>Nivel</th>
-                                            <th>Controle</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <th class="table-success" scope="row">Titulo:</th>
-                                            <td>Larry the Bird</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="table-success" scope="row">Titulo:</th>
-                                            <td>Larry the Bird</td>
-                                        </tr>
-                                        <tr>
-                                        </tr>
-                                        <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</button>
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <label>Observações</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <label>Imagem</label>
-                                    <img src="img/avatar-8.jpg"  alt="person" class="img-fluid rounded">
-                                    <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</button>
-                                </div>
+                                <div class="footer">
+                                    &nbsp&nbsp&nbsp&nbsp<button type="submit" name="salvar" value="salvar" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button><?php
+                                    if( isset ( $_SESSION['msg'] ) )
+                                    {
+                                        echo $_SESSION['msg'];
+                                        unset($_SESSION['msg']);
+                                    }
+                                    ?>
+                                </div
                             </form>
-                            <div class="footer">
-                                <button type="button" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
-                            </div>
-                        </div>
                     </div>
+                    </div>
+
                 </div>
+
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
 
-                            <form action="projeto.php" method="POST" class="form-inline col-md-12">
+                            <form action="produtor.php" method="POST" class="form-inline col-md-12">
 
                                 <div class="form-group col-9">
 
-                                    <h1 class="h3 display">Lista de Bandas</h1>
+                                    <h1 class="h3 display">Lista de Produtores</h1>
 
                                 </div>
                                 <div class="form-group">
@@ -248,177 +219,100 @@ include ('conexao.php');
                                 </div>
 
                             </form>
-                            <!-- Modal Cadastro Musico-->
-                            <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg">
-                                <div role="document" class="modal-dialog modal-md">
+
+
+
+                            <!-- Modal Alerta-->
+                            <div class="modal fade" id="alertamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 id="exampleModalLabel" class="modal-title">Novo Instrumento</h5>
-                                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Alerta</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p class="text-center">Selecione um instrumento</p>
-                                            <div class="ui-state-error ui-corner-all">
-                                                <?php
-                                                if(isset($_SESSION['msg'])){
-                                                    echo $_SESSION['msg'];
-                                                    unset($_SESSION['msg']);
-                                                }
-                                                ?>
-                                            </div>
-                                            <form method="POST" action="cadastroprojeto.php" class="row justify-content-md-center">
-                                                <div class="col-md-6 form-group">
-                                                    <label>Instrumento</label>
-                                                    <select name="instrumento" class="form-control">
-                                                        <?php
-                                                        $consInstrumento = "
-                                                               SELECT 
-                                                                 id_instrumento,
-                                                                 instrumento
-                                                               FROM
-                                                                 instrumentos
-                                                               ORDER BY  
-                                                                 instrumento 
-                                                               ";
-                                                        $row_instrumento = $objclasse->MySelect($consInstrumento);
-
-                                                        while ($inst = mysqli_fetch_object($row_instrumento)) {
-                                                            echo "<option value = '" . $inst->id_instrumento . "'>$inst->instrumento</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
-
-                                                </div>
-
-                                            </form>
-
-                                            <div class="modal-footer justify-content-md-center">
-                                                <button type="button" data-dismiss="modal" class="btn btn-primary"><span class="fa fa-times"></span> Adicionar</button>
-
-                                            </div>
+                                            Você realmente deseja DELETAR esse projeto?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                                            <button type="button" class="btn btn-primary">Sim</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="card-body">
+                                <div class="table-responsive table-hover">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nome do Produtor</th>
+                                            <th>Celular</th>
+                                            <th>E-mail</th>
+                                            <th>Controle</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
 
-
-
-
-                        <!-- Modal Alerta-->
-                        <div class="modal fade" id="alertamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Alerta</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Você realmente deseja DELETAR esse projeto?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-                                        <button type="button" class="btn btn-primary">Sim</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive table-hover">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Musicista</th>
-                                        <th>Instrumento</th>
-                                        <th>Celular</th>
-                                        <th>E-mail</th>
-                                        <th>Controle</th>
-
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                    $where = "";
-                                    $pesquisa = filter_input(INPUT_POST,'btnPesquisar',FILTER_SANITIZE_STRING);
-                                    if ($pesquisa != "") {
-                                        $where = "
-                                    WHERE
-                                        (
-                                            projetos.descricao_projeto LIKE '%".$pesquisa."%' OR
-                                            generos.descricao_genero LIKE '%".$pesquisa."%' OR
-                                            banda.nome_banda LIKE '%".$pesquisa."%' OR
-                                            produtores.nome_produtor LIKE '%".$pesquisa."%'
-                                         )   
-                                  ";
-                                    }
-                                    else {
                                         $where = "";
-                                    }
-                                    $result_projetos = "
+
+                                        $pesquisa = filter_input(INPUT_POST,'btnPesquisar',FILTER_SANITIZE_STRING);
+                                        //Efetua a pesquisa
+                                        if ($pesquisa != "") {
+                                            $where = "
+                                             WHERE
+                                           (
+                                            nome_produtor LIKE '%".$pesquisa."%' OR
+                                            celular_produtor LIKE '%".$pesquisa."%' OR
+                                            email_produtor LIKE '%".$pesquisa."%'
+                                            )   
+                                             ";
+                                        } else {
+                                            $where = "";
+                                        }
+                                        $result_pro = "
                                       SELECT 
-                                        projetos.id_projeto, 
-                                        projetos.album,
-                                        projetos.data_ini,
-                                        projetos.data_fim,
-                                        projetos.num_faixas,
-                                        generos.descricao_genero,
-                                        banda.nome_banda,
-                                        produtores.nome_produtor                            
+                                        id_produtor, 
+                                        nome_produtor,
+                                        celular_produtor,
+                                        email_produtor                        
                                       FROM 
-                                        projetos
-                                        LEFT JOIN generos ON generos.id_genero = projetos.id_genero_projeto
-                                        LEFT JOIN banda ON banda.id_banda = projetos.id_banda
-                                        LEFT JOIN produtores ON produtores.id_produtor = projetos.id_produtor                                     
+                                        produtores                                    
                                         $where                                   
-                                   ";
-                                    //echo $result_projetos;exit; //Se quiser depurar, descomentar
-                                    //$row_projetos = $objConexao->ExecutaConsulta($conexao,$result_projetos,'select',true);
-                                    $row_projetos = $objclasse->MySelect($result_projetos);
-                                    while($projeto = mysqli_fetch_object($row_projetos)) {
-                                        echo "<tr>
-                                          <th scope='row'>
-                                            <div class='form-check'>
-                                                <input class='form-check-input position-static' type='checkbox' id='blankCheckbox' value='option1' aria-label='...'>
-                                            </div>
+                                               ";
+                                        $row_pro = $objclasse->MySelect($result_pro);
+                                        //Mostra na Tabela
+                                        while ($prod = mysqli_fetch_object($row_pro)) {
+                                            echo "
+                                        <tr>
+                                          <th>
+                                          $prod->id_produtor
                                           </th>
                                           <td>         
-                                            $projeto->album
+                                            ".utf8_encode($prod->nome_produtor)."
                                           </td>
                                           <td>         
-                                            $projeto->descricao_genero
+                                            $prod->celular_produtor
                                           </td> 
                                           <td>         
-                                             ".utf8_encode($projeto->nome_banda)."
-                                          </td> 
-                                          <td>         
-                                            $projeto->nome_produtor
-                                          </td> 
+                                             $prod->email_produtor
+                                          </td>                                        
                                           <td>       
-                                            <div class='progress'>
-                                                <div class='progress-bar' role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>25%</div>
-                                            </div>
-                                          </td> 
-                                          <td>   
-                                            $projeto->data_ini
-                                          </td> 
-                                          <td>   
-                                            $projeto->data_fim
-                                          </td> 
-                                          <td>   
-                                            $projeto->num_faixas
-                                          </td> 
-                                    </tr>";
-                                    }
-                                    ?>
-                                    </tbody>
-                                </table>
+                                          <button type=\"button\" class=\"btn btn-danger btn-xs \"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button> <button type=\"button\" class=\"btn btn-secondary btn-xs \"><i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>
+                                          </td>
+                                        </tr>";
+                                        }
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
     </section>
     <footer class="main-footer">
         <div class="container-fluid">

@@ -198,9 +198,9 @@ session_start();
                           <p>Digite as Informações Iniciais do seu Projeto.</p>
                             <div class="ui-state-error ui-corner-all">
                                 <?php
-                                if(isset($_SESSION['msg'])){
-                                    echo $_SESSION['msg'];
-                                    unset($_SESSION['msg']);
+                                if (isset($_SESSION['msg'])) {
+                                     echo $_SESSION['msg'];
+                                     unset($_SESSION['msg']);
                                 }
                                 ?>
                             </div>
@@ -223,7 +223,8 @@ session_start();
                                               descricao_genero 
                                         ";
                                         $row_generos = $objclasse->MySelect($consultaGenero);
-                                        while($generos = mysqli_fetch_object($row_generos)) {
+
+                                        while ($generos = mysqli_fetch_object($row_generos)) {
                                             echo "<option value='".$generos->id_genero."'>$generos->descricao_genero</option>";
                                         }
                                     ?>
@@ -231,21 +232,21 @@ session_start();
                             </div>
                             <div class="col-md-7 form-group">
                               <label>Produtor Musical</label>
-                              <!--<input type="text" name="produtor" placeholder="Nome do Produtor" class="form-control">-->
                                 <select name="produtor" class="form-control">
                                     <?php
                                     $consultaProdutor = "
-                                            select
+                                            SELECT
                                               id_produtor,
                                               nome_produtor
-                                            from
+                                            FROM
                                               produtores
-                                            order by
+                                            ORDER BY
                                               nome_produtor 
-                                        ";
+                                            ";
                                     $row_produtor = $objclasse->MySelect($consultaProdutor);
-                                    while($produtores = mysqli_fetch_object($row_produtor)) {
-                                        echo "<option value='".$produtores->id_produtor."'>$produtores->nome_produtor</option>";
+
+                                    while ($produtores = mysqli_fetch_object($row_produtor)) {
+                                        echo "<option value = '" . $produtores->id_produtor . "'>$produtores->nome_produtor</option>";
                                     }
                                     ?>
                                 </select>
@@ -256,21 +257,21 @@ session_start();
                             </div>
                             <div class="col-md-7 form-group">
                               <label>Artista/Banda</label>
-                             <!--input type="text" name="banda" placeholder="Nome do Artista/Banda" class="form-control">-->
                                 <select name="banda" class="form-control">
                                     <?php
-                                    $consultaBanda = "
-                                             select
+                                    $consBanda = "
+                                             SELECT
                                                id_banda,
                                                nome_banda
-                                             from
+                                             FROM
                                                banda
-                                             order by  
+                                             ORDER BY 
                                                nome_banda 
-                                       ";
-                                    $row_banda = $objclasse->MySelect($consultaBanda);
-                                    while($banda = mysqli_fetch_object($row_banda)){
-                                        echo "<option value='".$banda->id_banda."'>$banda->nome_banda</option>";
+                                             ";
+                                    $row_banda = $objclasse->MySelect($consBanda);
+
+                                    while ($banda = mysqli_fetch_object($row_banda)){
+                                        echo "<option value = '" . $banda->id_banda . "'>$banda->nome_banda</option>";
                                     }
                                     ?>
                                 </select>
@@ -283,9 +284,6 @@ session_start();
                               <label>Nº Faixas</label>
                               <input type="number" name="num_faixas" placeholder="00" class="form-control">
                             </div>
-
-
-
                         </div>
                         <div class="modal-footer">
                           <button type="button" data-dismiss="modal" class="btn btn-secondary"><span class="fa fa-times"></span> Cancelar</button>
@@ -322,14 +320,15 @@ session_start();
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>Album</th>
-                          <th>Genero</th>
-                          <th>Artista</th>
-                          <th>Produtor</th>
+                          <th>Nome do Produtor</th>
+                          <th>Celular</th>
+                          <th>E-mail</th>
+                          <th>Controle</th>
                           <th>Andamento</th>
                           <th>Data Inicial</th>
                           <th>Data Final</th>
                           <th>Faixas</th>
+                          <th>Controle</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -372,10 +371,8 @@ session_start();
                               $row_projetos = $objclasse->MySelect($result_projetos);
                               while($projeto = mysqli_fetch_object($row_projetos)) {
                                     echo "<tr>
-                                          <th scope='row'>
-                                            <div class='form-check'>
-                                                <input class='form-check-input position-static' type='checkbox' id='blankCheckbox' value='option1' aria-label='...'>
-                                            </div>
+                                          <th>
+                                           $projeto->id_projeto
                                           </th>
                                           <td>         
                                             $projeto->album
@@ -403,6 +400,10 @@ session_start();
                                           <td>   
                                             $projeto->num_faixas
                                           </td> 
+                                          <td>
+                                             <button type=\"button\" class=\"btn btn-dark btn-xs \"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></button> <button type=\"button\" class=\"btn btn-danger btn-xs \"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button></td>
+
+                                          </td>
                                     </tr>";
                               }
                           ?>

@@ -313,55 +313,53 @@ include ('conexao.php');
 
                                                 <div class="col-md-7  form-group">
                                                     <label>Musicista</label>
-                                                    <!--<input type="text" name="produtor" placeholder="Nome do Produtor" class="form-control">-->
+                                                    <!--Select Musico-->
                                                     <select name="musico" class="form-control">
                                                         <?php
-                                                        $consultaMusico = "
-                                            select
-                                              id_musico,
-                                              musico
-                                            from
-                                              musico
-                                            order by
-                                              musico 
-                                        ";
-                                                        $row_musico =$objclasse->MySelect($consultaMusico);
-                                                        while($musico = mysqli_fetch_object($row_musico)) {
-                                                            echo "<option value='".$musico->id_musico."'>$musico->musico</option>";
+                                                        $consMusico = "
+                                                                SELECT
+                                                                  id_musico,
+                                                                  musico
+                                                                FROM
+                                                                  musico
+                                                                ORDER BY
+                                                                  musico 
+                                                                ";
+                                                        $row_musico =$objclasse->MySelect($consMusico);
+
+                                                        while ($musico = mysqli_fetch_object($row_musico)) {
+                                                            echo "<option value='" . $musico->id_musico . "'>$musico->musico</option>";
                                                         }
                                                         ?>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-7 form-group">
                                                     <label>Instrumento</label>
-                                                    <!--input type="text" name="banda" placeholder="Nome do Artista/Banda" class="form-control">-->
+                                                    <!--Select Instrumento-->
                                                     <select name="instrumento" class="form-control">
                                                         <?php
-                                                        $consultaInstrumento = "
-                                             select
-                                               id_instrumento,
-                                               instrumento
-                                             from
-                                               instrumentos
-                                             order by  
-                                               instrumento 
-                                       ";
-                                                        $row_instrumento = $objclasse->MySelect($consultaInstrumento);
-                                                        while($inst = mysqli_fetch_object($row_instrumento)){
-                                                            echo "<option value='".$inst->id_instrumento."'>$inst->instrumento</option>";
+                                                        $consInstrumento = "
+                                                               SELECT 
+                                                                 id_instrumento,
+                                                                 instrumento
+                                                               FROM
+                                                                 instrumentos
+                                                               ORDER BY  
+                                                                 instrumento 
+                                                               ";
+                                                        $row_instrumento = $objclasse->MySelect($consInstrumento);
+
+                                                        while ($inst = mysqli_fetch_object($row_instrumento)) {
+                                                            echo "<option value = '" . $inst->id_instrumento . "'>$inst->instrumento</option>";
                                                         }
                                                         ?>
                                                     </select>
                                                 </div>
-
-
-
                                         </div>
                                         <div class="modal-footer justify-content-md-center">
-
                                             <a href="banda.php"><button type="submit" name="adicionar" value="adicionar" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Adicionar</button></a>
-
-                                        </div></form>
+                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -440,10 +438,8 @@ include ('conexao.php');
                                     $row_ban = $objclasse->MySelect($result_banda);
                                     while($banda = mysqli_fetch_object($row_ban)) {
                                         echo "<tr>
-                                          <th scope='row'>
-                                            <div class='form-check'>
-                                                <input class='form-check-input position-static' type='checkbox' id='blankCheckbox' value='option1' aria-label='...'>
-                                            </div>
+                                          <th>
+                                           $banda->id_banda
                                           </th>
                                           <td>         
                                             ".utf8_encode($banda->nome_banda)."

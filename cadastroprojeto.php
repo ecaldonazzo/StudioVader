@@ -2,9 +2,9 @@
 session_start();
 include_once ("conexao.php");
 
-$btconcluir = filter_input (INPUT_POST, 'concluir1', FILTER_SANITIZE_STRING);
+$btconcluir = filter_input(INPUT_POST, 'concluir1', FILTER_SANITIZE_STRING);
 
-if($btconcluir){
+if ($btconcluir) {
     $dad = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
     $dad_st = array_map('strip_tags', $dad);
@@ -12,29 +12,13 @@ if($btconcluir){
 
     $erro = false;
 
-    if(in_array('',$dad_ok)){
-    $erro = true;
-    $_SESSION['msg'] = "Necessario preencher todos os campos";
-    header("Location: projeto.php");
-
-    }
-
-    elseif($erro === true){
+    if (in_array('',$dad_ok)) {
+       $erro = true;
+       $_SESSION['msg'] = "Necessario preencher todos os campos";
         header("Location: projeto.php");
-
-    }else {
-        /*
-         $insereProdutor = "
-          insert into produtores 
-            (nome_produtor) 
-          values 
-            ('".$dad['produtor']."')
-         ";
-        echo $insereProdutor;exit;
-        $objConexao->ExecutaConsulta($conexao,$insereProdutor,'insert');
-        $idProdutor = mysqli_insert_id($conexao);
-        */
-
+    } elseif ($erro === true) {
+        header("Location: projeto.php");
+    } else {
         $resultado = "
         INSERT INTO
             projetos 
@@ -44,23 +28,21 @@ if($btconcluir){
               num_faixas,
               id_genero_projeto,
               id_produtor,
-              id_banda)
-             
+              id_banda)       
         VALUES 
-            ('".$dad['album']."',
-            '".$dad['data_ini']."',
-            '".$dad['data_fim']."', 
-            ".$dad['num_faixas'].",
-            ".$dad['genero'].",
-             ".$dad['produtor'].",
-            ".$dad['banda'].")";
-        //echo $resultado;exit;
+            ('". $dad['album'] . "',
+            '" . $dad['data_ini'] . "',
+            '" . $dad['data_fim'] . "', 
+            '" . $dad['num_faixas'] . "',
+            '" . $dad['genero'] . "',
+            '" . $dad['produtor'] . "',
+            '" . $dad['banda'] . "')
+             ";
 
         $objclasse->MyQuery($resultado);
+
         header("Location: projeto.php");
-
-
-         }
+    }
 }
 
 

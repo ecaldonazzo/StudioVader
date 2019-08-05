@@ -3,7 +3,9 @@ session_start();
 include_once("conexao.php");
 
 $botaoregistrar = filter_input(INPUT_POST,'registrar',FILTER_SANITIZE_STRING);
-if($botaoregistrar){
+
+if ($botaoregistrar) {
+
     $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
     $dados_st = array_map('strip_tags', $dados);
@@ -12,7 +14,7 @@ if($botaoregistrar){
     $erro = false;
 
 
-    if(in_array('', $dados_ok)){
+    if (in_array('', $dados_ok)) {
         $erro = true;
         $_SESSION['msg'] = "Necessario preencher todos os campos";
         header("Location: register.php");
@@ -20,36 +22,35 @@ if($botaoregistrar){
         $erro = true;
         $_SESSION['msg'] = "A senha deve conter no minimo 6 caracteres";
         header("Location: register.php");
-    } elseif (stristr($dados_ok['senha'],"'")){
+    } elseif (stristr($dados_ok['senha'],"'")) {
         $erro = true;
         $_SESSION['msg'] = "Não é permite uso do caracter ('), tente novamente";
         header("Location: register.php");
-    } elseif($dados_ok['senha'] !== $dados_ok['confirme']) {
+    } elseif ($dados_ok['senha'] !== $dados_ok['confirme']) {
         $erro = true;
         $_SESSION['msg'] = "Senha não confirmada, tente novamente";
         header("Location: register.php");
-    } else{
+    } else {
         $selectusuario = "
         SELECT
           id_login
         FROM
           login
         WHERE
-          usuario = '".$dados_ok['usuario']."'";
+          usuario = '".$dados_ok['usuario']."'
+          ";
 
         $uservalida = $objclasse->MySelect($selectusuario);
-        if(mysqli_num_rows($uservalida) > 0){
+
+        if (mysqli_num_rows($uservalida) > 0) {
             $_SESSION['msg'] = "Usuario já cadastrado, tente novamente";
             header("Location: register.php");
         }
-
-
-
     }
 
-    if($erro === true){
+    if ($erro === true) {
         header("Location: register.php");
-    } else{
+    } else {
         $dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
 
         $result_usuario = "
@@ -59,15 +60,15 @@ if($botaoregistrar){
         usuario,
         senha)
         VALUES
-        ('".$dados['nome']."',
-        '".$dados['usuario']."',
-        '".$dados['senha']."')";
+        ('" . $dados['nome'] . "',
+         '" . $dados['usuario'] . "',
+         '" . $dados['senha'] . "')
+         ";
 
         $objquery = $objclasse->MyQuery($result_usuario);
+
         $_SESSION['msg'] = "Usuario cadastrado com Sucesso";
-        header("Location: register.php");
-
-
+        header("Location: login.php");
     }
 }
 

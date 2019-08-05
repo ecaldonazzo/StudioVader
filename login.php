@@ -41,12 +41,12 @@ session_start();
             <div class="logo text-uppercase"><span>Studio</span><strong class="text-primary">Vader</strong></div>
             <p>Controle em uma única interface Projetos de Gravação e Ensaios. </p>
               <p><?php
-                  if(isset($_SESSION['msg'])){
+                  if (isset($_SESSION['msg'])) {
                       echo $_SESSION['msg'];
                       unset($_SESSION['msg']);
                   }
                   ?></p>
-            <form method="POST" action="valida.php" class="text-left form-validate">
+            <form method="POST" action="validalogin.php" class="text-left form-validate">
               <div class="form-group-material">
                 <input id="usuario" type="text" name="usuario" required data-msg="Please enter your username" class="input-material">
                 <label for="usuario" class="label-material">Usuário</label>
