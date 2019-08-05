@@ -31,13 +31,13 @@ class MySQLClasses {
     }
     function LoginValidate($user,$debug = false){
         $sqlLogin = "
-            select  
+            SELECT  
                 id_login,
                 usuario,
                 senha
-            from
+            FROM
                 login
-            where
+            WHERE
                 usuario = '". $user ."'
                   ";
 
