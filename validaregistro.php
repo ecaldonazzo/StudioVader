@@ -37,12 +37,13 @@ if ($botaoregistrar) {
         FROM
           login
         WHERE
-          usuario = '".$dados_ok['usuario']."'
+          usuario = '". $dados_ok['usuario'] ."'
           ";
 
         $uservalida = $objclasse->MySelect($selectusuario);
 
         if (mysqli_num_rows($uservalida) > 0) {
+            $erro = true;
             $_SESSION['msg'] = "Usuario já cadastrado, tente novamente";
             header("Location: register.php");
         }
