@@ -116,10 +116,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;MariaDB" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Command Line Tools" flag="false" />
+      <visibility group="Grunt tasks" flag="false" />
+      <visibility group="Gulp tasks" flag="false" />
+      <visibility group="Node.js" flag="false" />
+      <visibility group="Recent projects" flag="false" />
+      <visibility group="Run configurations" flag="false" />
+      <visibility group="npm" flag="false" />
+    </myKeys>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,7 +225,7 @@
       <workItem from="1564682750761" duration="1609000" />
       <workItem from="1565394353841" duration="644000" />
       <workItem from="1565727698089" duration="199000" />
-      <workItem from="1565734693028" duration="607000" />
+      <workItem from="1565734693028" duration="1163000" />
     </task>
     <servers />
   </component>
