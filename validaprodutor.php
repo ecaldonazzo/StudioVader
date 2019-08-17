@@ -23,13 +23,13 @@ if ($btnsalvar) {
         id_produtor
         FROM
         produtores
-        where
+        WHERE
         nome_produtor = '" . $pro_ok['produtor'] . "'
         ";
         $procon = $objclasse->MySelect($queryprodutor);
 
         if (mysqli_num_rows($procon) > 0 ) {
-            $erro = true;
+             $erro = true;
             $_SESSION['msg'] = "<b style='color:orange;'> Produtor já Cadastrado, tente novamente!</b>";
             header("Location: produtor.php");
         }

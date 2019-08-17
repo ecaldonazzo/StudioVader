@@ -181,18 +181,21 @@ include ('conexao.php');
                                     <label>E-mail</label>
                                     <input type="email" name="email_produtor" placeholder="bandadepagodemetal@provedor.com.br" class="form-control">
                                 </div>
-                                <div class="footer">
-                                    &nbsp&nbsp&nbsp&nbsp<button type="submit" name="salvar" value="salvar" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button><?php
-                                    if( isset ( $_SESSION['msg'] ) )
-                                    {
-                                        echo $_SESSION['msg'];
-                                        unset($_SESSION['msg']);
-                                    }
-                                    ?>
-                                </div
-                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <?php
+                            if(isset($_SESSION['msg']) )
+                            {
+                                echo $_SESSION['msg'];
+                                unset($_SESSION['msg']);
+                            }
+                            ?>
+                            <button type="submit" name="salvar" value="salvar" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
+
+                        </div>
                     </div>
-                    </div>
+                    </form>
 
                 </div>
 
@@ -203,11 +206,8 @@ include ('conexao.php');
                         <div class="card-header">
 
                             <form action="produtor.php" method="POST" class="form-inline col-md-12">
-
                                 <div class="form-group col-9">
-
-                                    <h1 class="h3 display">Lista de Produtores</h1>
-
+                                    <h1 class="h3 display">Lista de Bandas</h1>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group ">
@@ -217,31 +217,8 @@ include ('conexao.php');
                                         </div>
                                     </div>
                                 </div>
-
                             </form>
 
-
-
-                            <!-- Modal Alerta-->
-                            <div class="modal fade" id="alertamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalCenterTitle">Alerta</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Você realmente deseja DELETAR esse projeto?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-                                            <button type="button" class="btn btn-primary">Sim</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="card-body">
                                 <div class="table-responsive table-hover">
                                     <table class="table">
@@ -313,6 +290,7 @@ include ('conexao.php');
                         </div>
                     </div>
                 </div>
+            </div>
     </section>
     <footer class="main-footer">
         <div class="container-fluid">

@@ -166,63 +166,67 @@ include ('conexao.php');
                             <h4>Musicista</h4>
                         </div>
                         <div class="card-body">
-                            <form class="row">
+                            <form method="POST" action="cadastromusico.php" class="row">
 
                                 <div class="col-md-5 form-group">
                                     <label>Nome do Musico</label>
-                                    <input type="text" placeholder="Nome do Musico" class="form-control">
+                                    <input type="text" name="musico" placeholder="Nome do Musico" class="form-control">
                                 </div>
                                 <div class="col-md-3 form-group">
                                     <label>Celular</label>
-                                    <input type="tel" placeholder="(DDD)9 9999-9999" class="form-control">
+                                    <input type="tel" name="celular_musico" placeholder="(DDD)9 9999-9999" class="form-control">
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label>E-mail</label>
-                                    <input type="email" placeholder="bandadepagodemetal@provedor.com.br" class="form-control">
+                                    <input type="email" name="email_musico" placeholder="bandadepagodemetal@provedor.com.br" class="form-control">
                                 </div>
 
                                 <div class="col-md-4 form-group">
                                     <label>Instrumento</label>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th>Instrumento</th>
-                                            <th>Nivel</th>
-                                            <th>Controle</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <th class="table-success" scope="row">Titulo:</th>
-                                            <td>Larry the Bird</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="table-success" scope="row">Titulo:</th>
-                                            <td>Larry the Bird</td>
-                                        </tr>
-                                        <tr>
-                                        </tr>
-                                        <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</button>
-                                        </tbody>
+                                             <select name="id_instrumento_musico" class="form-control">
+                                                    <?php
+                                                    $consInstrumento = "
+                                                               SELECT 
+                                                                 id_instrumento,
+                                                                 instrumento
+                                                               FROM
+                                                                 instrumentos
+                                                               ORDER BY  
+                                                                 instrumento 
+                                                               ";
+                                                    $row_instrumento = $objclasse->MySelect($consInstrumento);
 
-                                    </table>
+                                                    while ($inst = mysqli_fetch_object($row_instrumento)) {
+                                                        echo "<option value = '" . $inst->id_instrumento . "'>$inst->instrumento</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+
+
                                 </div>
+
                                 <div class="col-md-4 form-group">
                                     <label>Observações</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                                    <textarea name="obs_musico" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
                                 </div>
                                 <div class="col-md-2 form-group">
                                     <label>Imagem</label>
                                     <img src="img/avatar-8.jpg"  alt="person" class="img-fluid rounded">
                                     <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</button>
                                 </div>
-                            </form>
-                            <div class="footer">
-                                <button type="button" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
-                            </div>
+
                         </div>
+                        <div class="modal-footer">
+                            <?php
+                            if(isset($_SESSION['msg']) )
+                            {
+                                echo $_SESSION['msg'];
+                                unset($_SESSION['msg']);
+                            }
+                            ?>
+                            <button type="submit" name="salvarmusico" value="salvarmusico" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -231,11 +235,11 @@ include ('conexao.php');
                     <div class="card">
                         <div class="card-header">
 
-                            <form action="projeto.php" method="POST" class="form-inline col-md-12">
+                            <form action="musicos.php" method="POST" class="form-inline col-md-12">
 
                                 <div class="form-group col-9">
 
-                                    <h1 class="h3 display">Lista de Bandas</h1>
+                                    <h1 class="h3 display">Lista de Musicistas</h1>
 
                                 </div>
                                 <div class="form-group">
@@ -346,69 +350,53 @@ include ('conexao.php');
                                         $where = "
                                     WHERE
                                         (
-                                            projetos.descricao_projeto LIKE '%".$pesquisa."%' OR
-                                            generos.descricao_genero LIKE '%".$pesquisa."%' OR
-                                            banda.nome_banda LIKE '%".$pesquisa."%' OR
-                                            produtores.nome_produtor LIKE '%".$pesquisa."%'
+                                            musico.musico LIKE '%".$pesquisa."%' OR
+                                            musico.celular_musico LIKE '%".$pesquisa."%' OR
+                                            musico.email_musico LIKE '%".$pesquisa."%' OR
+                                            instrumentos.instrumento LIKE '%".$pesquisa."%'
                                          )   
                                   ";
                                     }
                                     else {
                                         $where = "";
                                     }
-                                    $result_projetos = "
+                                    $result_musico = "
                                       SELECT 
-                                        projetos.id_projeto, 
-                                        projetos.album,
-                                        projetos.data_ini,
-                                        projetos.data_fim,
-                                        projetos.num_faixas,
-                                        generos.descricao_genero,
-                                        banda.nome_banda,
-                                        produtores.nome_produtor                            
+                                        musico.id_musico, 
+                                        musico.musico,
+                                        musico.celular_musico,
+                                        musico.email_musico,
+                                        instrumentos.instrumento
+                                                    
                                       FROM 
-                                        projetos
-                                        LEFT JOIN generos ON generos.id_genero = projetos.id_genero_projeto
-                                        LEFT JOIN banda ON banda.id_banda = projetos.id_banda
-                                        LEFT JOIN produtores ON produtores.id_produtor = projetos.id_produtor                                     
+                                        musico
+                                        LEFT JOIN instrumentos ON instrumentos.id_instrumento = musico.id_instrumento_musico                                 
                                         $where                                   
                                    ";
                                     //echo $result_projetos;exit; //Se quiser depurar, descomentar
                                     //$row_projetos = $objConexao->ExecutaConsulta($conexao,$result_projetos,'select',true);
-                                    $row_projetos = $objclasse->MySelect($result_projetos);
-                                    while($projeto = mysqli_fetch_object($row_projetos)) {
+                                    $row_musico = $objclasse->MySelect($result_musico);
+                                    while($musico = mysqli_fetch_object($row_musico)) {
                                         echo "<tr>
-                                          <th scope='row'>
-                                            <div class='form-check'>
-                                                <input class='form-check-input position-static' type='checkbox' id='blankCheckbox' value='option1' aria-label='...'>
-                                            </div>
+                                          <th>
+                                          $musico->id_musico
                                           </th>
                                           <td>         
-                                            $projeto->album
+                                            $musico->musico
                                           </td>
                                           <td>         
-                                            $projeto->descricao_genero
+                                            $musico->instrumento
                                           </td> 
                                           <td>         
-                                             ".utf8_encode($projeto->nome_banda)."
+                                            $musico->celular_musico
                                           </td> 
                                           <td>         
-                                            $projeto->nome_produtor
+                                            $musico->email_musico
                                           </td> 
                                           <td>       
-                                            <div class='progress'>
-                                                <div class='progress-bar' role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>25%</div>
-                                            </div>
+                                        
                                           </td> 
-                                          <td>   
-                                            $projeto->data_ini
-                                          </td> 
-                                          <td>   
-                                            $projeto->data_fim
-                                          </td> 
-                                          <td>   
-                                            $projeto->num_faixas
-                                          </td> 
+                                    
                                     </tr>";
                                     }
                                     ?>

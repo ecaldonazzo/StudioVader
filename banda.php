@@ -250,14 +250,12 @@ include ('conexao.php');
                             <img src="img/avatar-8.jpg"  alt="person" class="img-fluid rounded">
                           <button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs pull-right"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</button>
                                 </div>
-
-                            </form>
-                            <div class="footer">
-
-                                <button type="button" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
-                            </div>
                         </div>
 
+                         <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
+                        </div>
+                        </form>
 
 
                     </div>
