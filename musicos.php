@@ -40,7 +40,7 @@ include ('conexao.php');
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
             <!-- User Info-->
-            <div class="sidenav-header-inner text-center"><img src="img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
+            <div class="sidenav-header-inner text-center"><img src="img/avatar-4.jpg" alt="person" class="img-fluid rounded-circle">
                 <h2 class="h5">Esdras Castro</h2><span>Produtor Musical</span>
             </div>
             <!-- Small Brand information, appears on minimized sidebar-->
@@ -50,22 +50,15 @@ include ('conexao.php');
         <div class="main-menu">
             <h5 class="sidenav-heading">Menu</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">
-                <li><a href="index.php"> <i class="icon-home"></i>Home                             </a></li>
-                <li><a href="forms.html"> <i class="icon-form"></i>Agenda                             </a></li>
-                <li><a href="projeto.php"> <i class="fa fa-bar-chart"></i>Projetos                             </a></li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Cadastro </a>
+                <li><a href="index.php"> <i class="icon-home"></i>Home</a></li>
+                <li><a href="projeto.php"> <i class="fa fa-bar-chart"></i>Projetos</a></li>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Cadastros </a>
                     <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                         <li><a href="musicos.php">Musicista</a></li>
                         <li><a href="banda.php">Banda</a></li>
                         <li><a href="produtor.php">Produtor</a></li>
                     </ul>
                 </li>
-            </ul>
-        </div>
-        <div class="admin-menu">
-            <h5 class="sidenav-heading">Second menu</h5>
-            <ul id="side-admin-menu" class="side-menu list-unstyled">
-                <li> <a href="#"> <i class="icon-screen"> </i>Equipamentos</a></li>
             </ul>
         </div>
     </div>
@@ -81,62 +74,6 @@ include ('conexao.php');
                             <div class="brand-text d-none d-md-inline-block"><span>Studio </span><strong class="text-primary">Vader</strong></div></a></div>
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
 
-                        <!-- Notifications dropdown-->
-                        <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
-                            <ul aria-labelledby="notifications" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
-                                        <div class="notification d-flex justify-content-between">
-                                            <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
-                                            <div class="notification-time"><small>4 minutes ago</small></div>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
-                                        <div class="notification d-flex justify-content-between">
-                                            <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
-                                            <div class="notification-time"><small>4 minutes ago</small></div>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
-                                        <div class="notification d-flex justify-content-between">
-                                            <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
-                                            <div class="notification-time"><small>4 minutes ago</small></div>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
-                                        <div class="notification d-flex justify-content-between">
-                                            <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
-                                            <div class="notification-time"><small>10 minutes ago</small></div>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>view all notifications                                            </strong></a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Messages dropdown-->
-                        <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
-                            <ul aria-labelledby="notifications" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                                        <div class="msg-body">
-                                            <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                                        <div class="msg-body">
-                                            <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                                        <div class="msg-body">
-                                            <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
-                                        </div></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages    </strong></a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Languages dropdown    -->
-                        <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
-                            <ul aria-labelledby="languages" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2"><span>French                                                         </span></a></li>
-                            </ul>
-                        </li>
                         <!-- Log out-->
                         <li class="nav-item"><a href="login.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
                     </ul>
@@ -304,9 +241,6 @@ include ('conexao.php');
                                 </div>
                             </div>
                         </div>
-
-
-
 
                         <!-- Modal Alerta-->
                         <div class="modal fade" id="alertamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f295fda-9f86-4612-9f4e-d33e74c16e8e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/cadastromusico.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pesquisaprodutor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/df7c0576-813f-4104-a1de-8027556aeeee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/df7c0576-813f-4104-a1de-8027556aeeee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banda.php" beforeDir="false" afterPath="$PROJECT_DIR$/banda.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musicos.php" beforeDir="false" afterPath="$PROJECT_DIR$/musicos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produtor.php" beforeDir="false" afterPath="$PROJECT_DIR$/produtor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validaprodutor.php" beforeDir="false" afterPath="$PROJECT_DIR$/validaprodutor.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,22 +129,7 @@
       <serviceView>
         <option name="contentProportion" value="0.13845322" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6fb424e7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6fb424e7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@24fd69bf" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6fb424e7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@47bfea77" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -245,7 +221,9 @@
       <workItem from="1565915974028" duration="1254000" />
       <workItem from="1565936226788" duration="647000" />
       <workItem from="1566007730530" duration="3956000" />
-      <workItem from="1566011780526" duration="7748000" />
+      <workItem from="1566011780526" duration="7858000" />
+      <workItem from="1566022028342" duration="67000" />
+      <workItem from="1566091545409" duration="402000" />
     </task>
     <servers />
   </component>
